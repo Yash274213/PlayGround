@@ -11,6 +11,14 @@
 <body>
   <main id="game-shell">
     <canvas id="game" aria-label="Blocklands game world"></canvas>
+    <div id="move-stick" class="move-stick" role="application" aria-label="Movement joystick">
+      <div class="stick-base">
+        <span class="stick-arrow stick-up">▲</span><span class="stick-arrow stick-right">▶</span>
+        <span class="stick-arrow stick-down">▼</span><span class="stick-arrow stick-left">◀</span>
+        <div id="stick-knob" class="stick-knob"></div>
+      </div>
+      <span class="stick-caption">MOVE</span>
+    </div>
     <div class="topbar">
       <div class="brand"><span class="brand-mark">▦</span><span>BLOCK<span class="brand-accent">LANDS</span></span></div>
       <div class="world-chip"><i></i> CREATIVE WORLD <span id="seed-label">#04821</span></div>
