@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#8ed8eb" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23577b43'/%3E%3Cpath d='M16 4 27 10v12l-11 6L5 22V10z' fill='%23f7d579'/%3E%3Cpath d='m16 4 11 6-11 6-11-6z' fill='%23fff0b0'/%3E%3C/svg%3E" />
+  <title>Blocklands — A Tiny Minecraft Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="Blocklands game world"></canvas>
+    <div class="topbar">
+      <div class="brand"><span class="brand-mark">▦</span><span>BLOCK<span class="brand-accent">LANDS</span></span></div>
+      <div class="world-chip"><i></i> CREATIVE WORLD <span id="seed-label">#04821</span></div>
+      <button id="sound-button" class="icon-button" aria-label="Toggle sound" title="Toggle sound">♪</button>
+    </div>
+    <div class="hud-left">
+      <div class="mini-label">YOUR ADVENTURE</div>
+      <div class="objective"><span class="objective-icon">✦</span><div><b>Make this place yours</b><small>Explore, collect, and build.</small></div></div>
+      <div class="coords"><span class="live-dot"></span><span id="coords">X 0 · Y 0</span><span class="coord-divider"></span><span id="biome">MEADOW</span></div>
+    </div>
+    <div class="crosshair" aria-hidden="true"><i></i></div>
+    <div class="toast" id="toast" role="status"></div>
+    <div class="bottom-ui">
+      <div class="help-row"><span class="keycap">W A S D</span><span>Move</span><span class="help-sep">·</span><span class="keycap">MOUSE</span><span>Aim</span><span class="help-sep">·</span><span class="keycap">CLICK</span><span>Mine / place</span></div>
+      <div class="hotbar-wrap"><div id="hotbar" class="hotbar"></div><div class="hotbar-caption">INVENTORY <span>1 — 6 TO SELECT</span></div></div>
+      <div class="mobile-actions"><button id="mobile-mine">⛏ <span>Mine</span></button><button id="mobile-place">＋ <span>Build</span></button></div>
+    </div>
+    <section id="welcome" class="welcome" aria-label="Welcome">
+      <div class="welcome-card">
+        <div class="eyebrow"><span></span> A LITTLE WORLD, ALL YOURS</div>
+        <h1>Build a life<br>in the <em>Blocklands.</em></h1>
+        <p>A quiet place to wander, gather, and make something wonderful.</p>
+        <button id="play-button" class="play-button">Enter the world <span>→</span></button>
+        <div class="welcome-foot"><span>✦</span> YOUR WORLD IS WAITING</div>
+      </div>
+      <div class="welcome-tip"><b>TIP</b><span>Every great build starts with one block.</span></div>
+    </section>
+    <div id="pause-overlay" class="pause-overlay"><div><div class="pause-mark">Ⅱ</div><h2>Taking a breather?</h2><p>Your world is right where you left it.</p><button id="resume-button" class="play-button">Back to exploring <span>→</span></button></div></div>
+    <div class="corner-note">A TINY SANDBOX · NO WRONG WAY TO PLAY</div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
